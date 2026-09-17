@@ -1,0 +1,19 @@
+DirectoryIndex index.html
+
+<IfModule mod_mime.c>
+  AddType application/pdf .pdf
+  AddType application/zip .zip
+  AddType application/vnd.openxmlformats-officedocument.wordprocessingml.document .docx
+  AddType application/vnd.openxmlformats-officedocument.spreadsheetml.sheet .xlsx
+  AddType application/vnd.openxmlformats-officedocument.presentationml.presentation .pptx
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|png|jpg|jpeg|svg|webp|woff2)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+
+  <FilesMatch "\.(pdf|zip|docx|xlsx|pptx)$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+</IfModule>

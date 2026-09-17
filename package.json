@@ -1,0 +1,26 @@
+{
+  "name": "somnog9-workshop-hub",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "web",
+    "docs"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n WEB,DOCS -c blue,cyan \"npm run dev:web\" \"npm run dev:docs\"",
+    "dev:web": "npm run dev -w web",
+    "dev:docs": "npm run start -w docs -- --port 3001",
+    "build": "npm run build:web && npm run build:docs && node scripts/combine-builds.mjs",
+    "build:web": "npm run build -w web",
+    "build:docs": "npm run build -w docs",
+    "preview": "serve web/dist -l 4173",
+    "clean": "node scripts/clean.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "serve": "^14.2.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

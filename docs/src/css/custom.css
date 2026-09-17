@@ -1,0 +1,376 @@
+:root {
+  --ifm-color-primary: #2aa8d8;
+  --ifm-color-primary-dark: #1f9dcc;
+  --ifm-color-primary-darker: #1d94c1;
+  --ifm-color-primary-darkest: #187a9f;
+  --ifm-color-primary-light: #42b2de;
+  --ifm-color-primary-lighter: #4db6e0;
+  --ifm-color-primary-lightest: #70c4e7;
+  --ifm-background-color: #ffffff;
+  --ifm-font-color-base: #344054;
+  --ifm-heading-color: #111827;
+  --ifm-navbar-height: 86px;
+  --ifm-font-family-base: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  --ifm-global-radius: 6px;
+}
+
+html,
+body {
+  background: #fff;
+}
+
+.navbar {
+  padding: 0 32px;
+  border-bottom: 1px solid #e4e9ef;
+  box-shadow: none;
+  background: rgba(255,255,255,.98);
+}
+
+.navbar__inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.navbar__logo {
+  height: 70px;
+}
+
+.navbar__logo img {
+  width: 224px;
+  height: 70px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.navbar__items--right {
+  gap: 22px;
+}
+
+.navbar__link {
+  height: 86px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  color: #475467;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.navbar__link:hover {
+  color: #111827;
+}
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid #e4e9ef !important;
+}
+
+.menu {
+  padding: 26px 18px 38px;
+  font-size: .92rem;
+}
+
+.menu__link {
+  border-radius: 4px;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background: #eaf7fc;
+  color: #148fc0;
+  font-weight: 700;
+}
+
+.theme-doc-markdown {
+  max-width: 780px;
+  color: #344054;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.theme-doc-markdown h1 {
+  margin-bottom: 18px;
+  color: #0b0d11;
+  font-size: 3rem;
+  letter-spacing: -.04em;
+}
+
+.theme-doc-markdown h2 {
+  margin-top: 2.4rem;
+  padding-top: .3rem;
+  color: #111827;
+  font-size: 1.65rem;
+  letter-spacing: -.025em;
+}
+
+.theme-doc-markdown h3 {
+  color: #202939;
+}
+
+.theme-doc-markdown a {
+  color: #148fc0;
+}
+
+.theme-doc-markdown blockquote {
+  border-left-color: #2aa8d8;
+  background: #f5fbfe;
+  color: #475467;
+}
+
+.theme-doc-markdown table {
+  display: table;
+  width: 100%;
+}
+
+.theme-doc-markdown table th {
+  background: #f7f9fb;
+}
+
+.theme-doc-breadcrumbs {
+  margin-bottom: 22px !important;
+}
+
+.pagination-nav__link {
+  border: 1px solid #e4e9ef;
+  box-shadow: none;
+}
+
+.pagination-nav__link:hover {
+  border-color: #a7dced;
+}
+
+.footer {
+  border-top: 1px solid #e4e9ef;
+  background: #fff;
+  color: #667085;
+}
+
+.footer__copyright {
+  font-size: .82rem;
+}
+
+code {
+  border-radius: 4px;
+}
+
+pre code {
+  font-size: .88rem;
+}
+
+@media (max-width: 996px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar__logo img {
+    width: 182px;
+  }
+}
+
+/* =========================================================
+   SOMNOG9 LIGHT CODE BLOCKS
+   GitHub / VS Code Light inspired
+   ========================================================= */
+
+.theme-code-block {
+  position: relative;
+
+  margin: 18px 0 34px !important;
+
+  border: 1px solid #d8dee4 !important;
+  border-radius: 8px !important;
+
+  overflow: hidden;
+
+  background: #f6f8fa !important;
+
+  box-shadow:
+    0 1px 2px rgba(16, 24, 40, 0.04) !important;
+}
+
+
+/* Main code editor area */
+.theme-code-block pre,
+.theme-code-block .prism-code {
+  margin: 0 !important;
+
+  padding: 20px 22px !important;
+
+  background: #f6f8fa !important;
+
+  font-family:
+    "Cascadia Code",
+    "Cascadia Mono",
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    monospace !important;
+
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+
+  color: #24292f !important;
+
+  tab-size: 2;
+}
+
+
+/* Remove Docusaurus default effects */
+.theme-code-block > div {
+  box-shadow: none !important;
+}
+
+
+/* Code itself */
+.theme-code-block code {
+  padding: 0 !important;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  font-family: inherit !important;
+}
+
+
+/* =========================================================
+   COPY BUTTON
+   ========================================================= */
+
+.theme-code-block button {
+  position: absolute !important;
+
+  top: 10px !important;
+  right: 10px !important;
+
+  width: 34px !important;
+  height: 34px !important;
+
+  padding: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border: 1px solid #d0d7de !important;
+  border-radius: 6px !important;
+
+  background: #ffffff !important;
+
+  opacity: 0 !important;
+
+  box-shadow:
+    0 1px 2px rgba(16, 24, 40, 0.05) !important;
+
+  transition:
+    opacity 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease !important;
+}
+
+
+/* Show copy button when block is hovered */
+.theme-code-block:hover button {
+  opacity: 1 !important;
+}
+
+
+.theme-code-block button:hover {
+  background: #f3f4f6 !important;
+  border-color: #afb8c1 !important;
+}
+
+
+.theme-code-block button svg {
+  width: 16px !important;
+  height: 16px !important;
+
+  color: #57606a !important;
+}
+
+
+/* =========================================================
+   OPTIONAL CODE BLOCK TITLE
+   Example:
+   ```js title="app.js"
+   ========================================================= */
+
+.theme-code-block > div:first-child:not(:last-child) {
+  min-height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 16px !important;
+
+  border-bottom: 1px solid #d8dee4 !important;
+
+  background: #ffffff !important;
+
+  color: #57606a !important;
+
+  font-family:
+    "Cascadia Code",
+    Consolas,
+    monospace !important;
+
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+
+/* =========================================================
+   HIGHLIGHTED CODE LINE
+   ========================================================= */
+
+.theme-code-block-highlighted-line {
+  display: block;
+
+  margin: 0 -22px !important;
+  padding: 0 22px !important;
+
+  background: #ddf4ff !important;
+
+  border-left: 3px solid #2aa8d8 !important;
+}
+
+
+/* =========================================================
+   INLINE CODE
+   Example: run `npm install`
+   ========================================================= */
+
+.theme-doc-markdown :not(pre) > code {
+  padding: 2px 6px !important;
+
+  border: 1px solid rgba(175, 184, 193, 0.45) !important;
+  border-radius: 4px !important;
+
+  background: #f6f8fa !important;
+
+  color: #24292f !important;
+
+  font-family:
+    "Cascadia Code",
+    "Cascadia Mono",
+    Consolas,
+    monospace !important;
+
+  font-size: 0.88em !important;
+}
+
+
+/* =========================================================
+   SPACING
+   ========================================================= */
+
+.theme-doc-markdown h2 + .theme-code-block,
+.theme-doc-markdown h3 + .theme-code-block {
+  margin-top: 14px !important;
+}
+
+
+/* Slightly reduce excessive space after code blocks */
+.theme-code-block + h2 {
+  margin-top: 3rem !important;
+}
