@@ -17,7 +17,7 @@ export function Header({active}: Props) {
     <header className="site-header">
       <div className="site-header__inner">
         <a className="brand" href={withBase('/')} aria-label="SOMNOG9 home">
-          <img src={withBase('/images/somnog9-logo.png')} alt="SOMNOG9 Workshop and Conference" />
+          <img src={withBase('/images/somnog9-logo.png')} alt="SomNOG9 Workshop and Conference" />
         </a>
 
         <nav className="main-nav" aria-label="Main navigation">

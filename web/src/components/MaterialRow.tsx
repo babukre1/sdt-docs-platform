@@ -2,30 +2,16 @@ import type {Material} from '../data/materials';
 import {isExternalUrl, withBase} from '../lib/paths';
 import {FileTypeBadge} from './FileTypeBadge';
 
-const downloadTypes = new Set<Material['type']>(['pptx', 'docx', 'xlsx', 'zip']);
-
-function actionLabel(material: Material) {
-  switch (material.type) {
-    case 'docs':
-      return 'Read Docs';
-    case 'pdf':
-      return 'View';
-    case 'github':
-      return 'Open Repository';
-    case 'video':
-      return 'Watch';
-    case 'link':
-      return 'Open';
-    default:
-      return 'Download';
-  }
-}
+const viewableTypes = new Set<Material['type']>(['docs', 'pdf', 'link', 'github', 'video']);
+const downloadableTypes = new Set<Material['type']>(['pdf', 'pptx', 'docx', 'xlsx', 'zip']);
 
 export function MaterialRow({material}: {material: Material}) {
   const external = isExternalUrl(material.href);
   const href = external ? material.href : withBase(material.href);
-  const shouldDownload = downloadTypes.has(material.type);
   const newTab = material.type === 'pdf' || external;
+  const isMarkdown = material.href.toLowerCase().endsWith('.md');
+  const canView = viewableTypes.has(material.type) || isMarkdown;
+  const canDownload = downloadableTypes.has(material.type) && !isMarkdown;
 
   return (
     <div className="material-row">
@@ -35,19 +21,30 @@ export function MaterialRow({material}: {material: Material}) {
 
       <div className="material-row__name">
         <strong>{material.title}</strong>
-        {material.description && <small>{material.description}</small>}
       </div>
 
       <div className="material-row__size">{material.size || '-'}</div>
 
       <div className="material-row__action">
-        <a
-          href={href}
-          target={newTab ? '_blank' : undefined}
-          rel={newTab ? 'noreferrer' : undefined}
-          download={shouldDownload ? true : undefined}>
-          {actionLabel(material)}
-        </a>
+        {canView && (
+          <a
+            className="material-action material-action--view"
+            href={href}
+            target={newTab ? '_blank' : undefined}
+            rel={newTab ? 'noreferrer' : undefined}>
+            View
+          </a>
+        )}
+        {canDownload && (
+          <a
+            className="material-action material-action--download"
+            href={href}
+            download
+            target={external ? '_blank' : undefined}
+            rel={external ? 'noreferrer' : undefined}>
+            Download
+          </a>
+        )}
       </div>
     </div>
   );

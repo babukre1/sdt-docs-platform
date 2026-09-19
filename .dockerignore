@@ -1,0 +1,10 @@
+.git
+.github
+node_modules
+web/node_modules
+docs/node_modules
+web/dist
+docs/build
+docs/.docusaurus
+*.log
+*.tsbuildinfo

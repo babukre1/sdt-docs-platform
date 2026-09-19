@@ -1,4 +1,4 @@
-SOMNOG9 - Day 3 materials
+SomNOG9 - Day 3 materials
 
 Put the real workshop files for Day 3 in this folder.
 

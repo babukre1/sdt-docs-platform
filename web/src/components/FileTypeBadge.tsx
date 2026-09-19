@@ -1,5 +1,7 @@
 import type {MaterialType} from '../data/materials';
 
 export function FileTypeBadge({type}: {type: MaterialType}) {
-  return <span className={`file-type file-type--${type}`}>{type.toUpperCase()}</span>;
+  const label = type === 'docs' ? 'DOC' : type.toUpperCase();
+
+  return <span className={`file-type file-type--${type}`} aria-label={`${label} file`}>{label}</span>;
 }

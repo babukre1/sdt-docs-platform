@@ -1,13 +1,13 @@
 export type MaterialType =
-  | 'docs'
-  | 'pdf'
-  | 'pptx'
-  | 'docx'
-  | 'xlsx'
-  | 'zip'
-  | 'link'
-  | 'github'
-  | 'video';
+  | "docs"
+  | "pdf"
+  | "pptx"
+  | "docx"
+  | "xlsx"
+  | "zip"
+  | "link"
+  | "github"
+  | "video";
 
 export type Material = {
   id: string;
@@ -39,64 +39,63 @@ export type MaterialGroup = {
  */
 export const materialGroups: MaterialGroup[] = [
   {
-    day: 'Day 1',
-    date: 'Saturday, 19 September 2026',
+    day: "Day 1",
+    date: "Saturday, 19 September 2026",
     materials: [
       {
-        id: 'git-guide',
-        title: 'Git & GitHub Workshop Guide',
-        description: 'Step-by-step workshop documentation.',
-        type: 'docs',
-        href: '/docs/day-1/git-github/',
+        id: "git-guide",
+        title: "Git & GitHub Workshop Guide",
+        description: "Step-by-step workshop documentation.",
+        type: "docs",
+        href: "/docs/day-1/git-github/",
       },
       {
-        id: 'html-css-guide',
-        title: 'HTML & CSS Workshop Guide',
-        description: 'HTML and CSS notes with examples.',
-        type: 'docs',
-        href: '/docs/day-1/html-css/',
+        id: "html-css-guide",
+        title: "HTML & CSS Workshop Guide",
+        description: "HTML and CSS notes with examples.",
+        type: "docs",
+        href: "/docs/day-1/html-css/",
+      },
+      {
+        id: "groups",
+        title: "Groups and responsibilities",
+        // description: "Presentation used during the Git & GitHub session.",
+        type: "xlsx",
+        href: "/materials/day-1/Groups_and_responsibilities.xlsx",
+      },
+      {
+        id: "somnog",
+        title: "Monthly Snapshot",
+        // description: "Presentation used during the Git & GitHub session.",
+        type: "pdf",
+        href: "/materials/day-1/July - Monthly Snapshot.pdf",
       },
     ],
   },
   {
-    day: 'Day 2',
-    date: 'Sunday, 20 September 2026',
+    day: "Day 2",
+    date: "Sunday, 20 September 2026",
     materials: [
       {
-        id: 'javascript-guide',
-        title: 'JavaScript Fundamentals',
-        description: 'JavaScript workshop documentation.',
-        type: 'docs',
-        href: '/docs/day-2/javascript/',
+        id: "javascript-guide",
+        title: "JavaScript Fundamentals",
+        description: "JavaScript workshop documentation.",
+        type: "docs",
+        href: "/docs/day-2/javascript/",
       },
     ],
   },
   {
-    day: 'Day 3',
-    date: 'Monday, 21 September 2026',
+    day: "Day 3",
+    date: "Monday, 21 September 2026",
     materials: [
       {
-        id: 'react-guide',
-        title: 'React Fundamentals',
-        description: 'React workshop documentation and examples.',
-        type: 'docs',
-        href: '/docs/day-3/react/',
+        id: "react-guide",
+        title: "React Fundamentals",
+        description: "React workshop documentation and examples.",
+        type: "docs",
+        href: "/docs/day-3/react/",
       },
     ],
-  },
-  {
-    day: 'Day 4',
-    date: 'Tuesday, 22 September 2026',
-    materials: [],
-  },
-  {
-    day: 'Day 5',
-    date: 'Wednesday, 23 September 2026',
-    materials: [],
-  },
-  {
-    day: 'Day 6',
-    date: 'Thursday, 24 September 2026',
-    materials: [],
   },
 ];

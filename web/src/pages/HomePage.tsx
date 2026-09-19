@@ -7,10 +7,8 @@ export function HomePage() {
       <section className="home-hero">
         <div className="content-width home-hero__inner">
           <div className="home-hero__content">
-            <p className="eyebrow">SOMNOG9 · SOFTWARE DEVELOPMENT TRACK</p>
-            <h1>
-              Workshop schedule and <span>learning materials</span>
-            </h1>
+            <p className="home-kicker">SomNOG9 · Software Development Track</p>
+            <h1>Workshop schedule and learning materials</h1>
             <p className="home-hero__lead">
               A simple place for participants to check the programme, open workshop files and read session documentation.
             </p>
@@ -25,27 +23,15 @@ export function HomePage() {
               <a className="button button--secondary" href={withBase('/materials/')}>Open Materials</a>
             </div>
           </div>
-
-          <div className="home-hero__mark" aria-hidden="true">
-            <span>LEARN</span>
-            <span>BUILD</span>
-            <span>CONNECT</span>
-          </div>
         </div>
-      </section>
-
-      <section className="content-width public-note">
-        <strong>Everything in one place.</strong>
-        <span>Workshop resources are available directly from the site. Documentation opens under the SOMNOG9 Docs section.</span>
       </section>
 
       <section className="content-width quick-section">
         <div className="section-title">
           <div>
-            <p className="eyebrow">QUICK ACCESS</p>
-            <h2>Workshop resources</h2>
+            <p className="home-kicker">Resources</p>
+            <h2>Everything in one place</h2>
           </div>
-          <div className="brand-rule brand-rule--short" aria-hidden="true"><span /></div>
         </div>
 
         <div className="quick-links">

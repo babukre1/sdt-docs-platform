@@ -2,6 +2,9 @@
   "name": "somnog9-workshop-hub",
   "version": "1.0.0",
   "private": true,
+  "allowScripts": {
+    "esbuild": true
+  },
   "workspaces": [
     "web",
     "docs"

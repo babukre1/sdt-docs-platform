@@ -5,5 +5,7 @@ docs/build/
 docs/.docusaurus/
 .DS_Store
 *.log
+*.tsbuildinfo
+*.pem
 .env
 .env.local

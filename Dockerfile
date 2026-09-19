@@ -2,10 +2,11 @@ FROM node:20-alpine AS build
 WORKDIR /app
 
 COPY package.json ./
+COPY package-lock.json ./
 COPY web/package.json ./web/package.json
 COPY docs/package.json ./docs/package.json
 
-RUN npm install
+RUN npm ci
 
 COPY . .
 RUN npm run build

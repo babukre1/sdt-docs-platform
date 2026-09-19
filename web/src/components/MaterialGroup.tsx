@@ -5,17 +5,14 @@ export function MaterialGroup({group}: {group: MaterialGroupType}) {
   return (
     <section className="material-group">
       <div className="material-group__heading">
-        <div>
-          <h2>{group.day}</h2>
-          <span>{group.date}</span>
-        </div>
-        <small>{group.materials.length} {group.materials.length === 1 ? 'item' : 'items'}</small>
+        <h2>{group.day} – {group.date}</h2>
+        <small>{group.materials.length} {group.materials.length === 1 ? 'file' : 'files'}</small>
       </div>
 
       {group.materials.length > 0 ? (
         <div className="material-list" role="table" aria-label={`${group.day} materials`}>
           <div className="material-list__header" role="row">
-            <span>Type</span>
+            <span aria-hidden="true" />
             <span>Name</span>
             <span>Size</span>
             <span>Action</span>
