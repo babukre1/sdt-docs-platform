@@ -8,7 +8,7 @@ export function SchedulePage() {
       <div className="content-width page-shell">
         <header className="schedule-heading">
           <h1>Workshop Schedule</h1>
-          <p>Software Development Track · 19–24 Sep, 2026</p>
+          <p>Microservices &amp; Full-Stack Engineering · 19–21 Sep, 2026</p>
         </header>
 
         <div className="schedule-stack">

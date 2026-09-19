@@ -28,6 +28,15 @@ export function ScheduleTable({day}: {day: WorkshopDay}) {
           </tbody>
         </table>
       </div>
+
+      {day.followUp && (
+        <div className="schedule-follow-up">
+          <h3>{day.followUp.title}</h3>
+          <ul>
+            {day.followUp.items.map((item) => <li key={item}>{item}</li>)}
+          </ul>
+        </div>
+      )}
     </section>
   );
 }
