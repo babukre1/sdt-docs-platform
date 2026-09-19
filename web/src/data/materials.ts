@@ -43,18 +43,11 @@ export const materialGroups: MaterialGroup[] = [
     date: "Saturday, 19 September 2026",
     materials: [
       {
-        id: "git-guide",
-        title: "Git & GitHub Workshop Guide",
-        description: "Step-by-step workshop documentation.",
-        type: "docs",
-        href: "/docs/day-1/git-github/",
-      },
-      {
-        id: "html-css-guide",
-        title: "HTML & CSS Workshop Guide",
+        id: "schedule",
+        title: "Schedule",
         description: "HTML and CSS notes with examples.",
         type: "docs",
-        href: "/docs/day-1/html-css/",
+        href: "/docs/day-1/schedule/",
       },
       {
         id: "groups",
@@ -63,39 +56,16 @@ export const materialGroups: MaterialGroup[] = [
         type: "xlsx",
         href: "/materials/day-1/Groups_and_responsibilities.xlsx",
       },
-      {
-        id: "somnog",
-        title: "Monthly Snapshot",
-        // description: "Presentation used during the Git & GitHub session.",
-        type: "pdf",
-        href: "/materials/day-1/July - Monthly Snapshot.pdf",
-      },
     ],
   },
   {
     day: "Day 2",
     date: "Sunday, 20 September 2026",
-    materials: [
-      {
-        id: "javascript-guide",
-        title: "JavaScript Fundamentals",
-        description: "JavaScript workshop documentation.",
-        type: "docs",
-        href: "/docs/day-2/javascript/",
-      },
-    ],
+    materials: [],
   },
   {
     day: "Day 3",
     date: "Monday, 21 September 2026",
-    materials: [
-      {
-        id: "react-guide",
-        title: "React Fundamentals",
-        description: "React workshop documentation and examples.",
-        type: "docs",
-        href: "/docs/day-3/react/",
-      },
-    ],
+    materials: [],
   },
 ];
